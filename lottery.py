@@ -1,5 +1,5 @@
 import random
-
+import time
 
 # Creating a function to determined whether the user is old enough to play
 # Importing sys function allows the program to close if the user is under age
@@ -11,14 +11,15 @@ def legal_age():
         player = int(input("Please enter your age. \n"))
         if player < 18:
             print("You are not allowed to play")
+            time.sleep(5)
             exit()
         elif player >= 18:
             print("Welcome to the National lottery")
     except ValueError:
         print("Error input")
         exit()
-
     return player
+
 
 # Creating a function for the random numbers to be selection between 1 and 49
 def generate_random_number():
