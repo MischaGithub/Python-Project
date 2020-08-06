@@ -11,6 +11,7 @@ def legal_age():
         player = int(input("Please enter your age. \n"))
         if player < 18:
             print("You are not allowed to play")
+            print("Goodbye")
             time.sleep(5)
             exit()
         elif player >= 18:
