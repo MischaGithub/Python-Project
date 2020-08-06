@@ -1,5 +1,7 @@
+import time
 #Import from the lottery file all that will be needed for display purposes
 #And to be able to write for the text file
+
 from lottery import legal_age, lottery_random, player_numbers, prize_catogery
 
 
@@ -10,6 +12,7 @@ from datetime import date
 #in a text file
 
 player_age = legal_age()
+
 
 now = date.today()
 
@@ -24,6 +27,7 @@ print("The results of the lottery for today", str(now))
 print("Lottery Numbers: ", str(lottery_numbers))
 print("User Numbers: ", str(player_numbers))
 print("You have won: ", category_details['category'])
+time.sleep(5)
 
 #Creating a text file to write the results
 #And putting each results on a new line
